@@ -1,0 +1,20 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Express CRUD</title>
+</head>
+<body>
+	<h1>ExpressJS Blog</h1>
+	<a href="/addpost"><h3>Add new post</h3></a>
+	<% for(var i = 0; i < posts.length; i++) {%>
+		<div>
+			<h3><%= posts[i].title %></h3>
+			<p><%= posts[i].post %></p>
+			<span style="display: none"><%= posts[i]._id %></span>
+			<button>Delete post</button>
+		</div>
+	<% } %>
+	<script src="/delete.js"></script>
+</body>
+</html>
